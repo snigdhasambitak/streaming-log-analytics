@@ -1,0 +1,16 @@
+version: '3.7'
+  services:
+    docker-metricbeat:
+      user: root
+      container_name: docker-metricbeat
+      build:
+        context: metricbeat/
+        args:
+          ELK_VERSION: ${ELK_VERSION}
+      volumes:
+        - /:/hostfs:ro
+        - /proc:/hostfs/proc:ro
+        - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+      networks:
+        - efk

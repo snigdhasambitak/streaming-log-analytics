@@ -1,0 +1,31 @@
+cluster.name: log-analytics-cluster
+node.name: single-node
+bootstrap.memory_lock: true
+
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+# path.repo: /usr/share/elasticsearch/backup
+
+discovery.type: single-node
+discovery.seed_hosts: single-node
+
+network.host: 0.0.0.0
+http.port: 9200
+http.compression: true
+http.compression_level: 3
+http.cors.enabled: false
+http.cors.allow-origin: /https?:\/\/127\.0\.0\.1(:[0-9]+)?/
+http.max_content_length: 2147483647b
+gateway.expected_master_nodes: 1
+gateway.expected_data_nodes: 1
+gateway.recover_after_master_nodes: 1
+gateway.recover_after_data_nodes: 1
+action.auto_create_index: true
+action.destructive_requires_name: true
+cluster.routing.use_adaptive_replica_selection: true
+transport.port: 9300 
+transport.compress: true
+
+xpack.ml.enabled: false
+# xpack.monitoring.enabled: true
+xpack.monitoring.collection.enabled: true
