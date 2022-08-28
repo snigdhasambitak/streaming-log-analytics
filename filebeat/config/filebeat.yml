@@ -16,6 +16,13 @@ filebeat.autodiscover:
   providers:
     - type: docker
       hints.enabled: true
+      templates:
+        - condition:
+            equals.docker.container.image: log-generator
+          config:
+            - type: container
+              # paths:
+              #   - /var/lib/docker/containers/**/*.log
 
 processors:
   - add_cloud_metadata: ~

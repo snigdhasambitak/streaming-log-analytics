@@ -1,5 +1,18 @@
 version: '3.7'
 services:
+  log-generator:
+    container_name: log-generator
+    build:
+      context: log-generating-extensions/
+    restart: always
+    volumes:
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs:rw  
+    ports:
+      - 5500:5500
+    expose:
+      - 5500
+    networks:
+      - elk
   log-analytics:
     container_name: log-analytics
     build:
