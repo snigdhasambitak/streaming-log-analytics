@@ -36,6 +36,11 @@ docker-compose up -d --build
 ```
 <br>
 
+Now we should see the below containers running 
+
+<img width="1110" alt="image" src="https://user-images.githubusercontent.com/8248474/187526197-49814506-4ddc-4d6e-9fa5-c0357cdf2cd1.png">
+
+
 # Kibana logs and visualisation
 <img width="837" alt="image" src="https://user-images.githubusercontent.com/8248474/187525809-4caaec04-496f-4035-b386-b9da018747a5.png">
 
