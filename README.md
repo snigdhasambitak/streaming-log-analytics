@@ -11,7 +11,7 @@ In this integration <b>filebeat</b> will install in all servers where your appli
 ![git_imame](https://user-images.githubusercontent.com/50271311/155036578-c1f2517f-cf4b-4eb0-a9fe-4d25d7031e70.png)
 <br><br>
 
-![kafka_flow](<img width="865" alt="image" src="https://user-images.githubusercontent.com/8248474/187525222-a04c8af5-f90a-4961-939c-64bba2d5fbc1.png">)
+<img width="860" alt="image" src="https://user-images.githubusercontent.com/8248474/187525873-b734499a-425a-4900-9886-a4708192f2c2.png">
 
 
 
@@ -37,11 +37,10 @@ docker-compose up -d --build
 <br>
 
 # Kibana logs and visualisation
+<img width="837" alt="image" src="https://user-images.githubusercontent.com/8248474/187525809-4caaec04-496f-4035-b386-b9da018747a5.png">
 
 
-![kibana_logs](<img width="841" alt="image" src="https://user-images.githubusercontent.com/8248474/187525107-824d9292-17b7-4548-b326-9cb0c1f53476.png">
-)
-![kibana](<img width="832" alt="image" src="https://user-images.githubusercontent.com/8248474/187524878-833f86ee-f6a6-4e4d-9eb9-ce3d906596d4.png">
-)
+<img width="844" alt="image" src="https://user-images.githubusercontent.com/8248474/187525709-1a97ffc5-7f86-41b6-919d-3ddb00be6e74.png">
+
 <br><br>
 
