@@ -109,6 +109,13 @@ services:
     networks:
       - elk
 
+  # docker-pyspark:  
+  #   container_name: docker-pyspark
+  #   build:
+  #     context: pyspark/
+  #   networks:
+  #     - elk  
+
   kafka:
     image: wurstmeister/kafka:2.13-2.7.0
     container_name: docker-kafka
