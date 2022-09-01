@@ -1,0 +1,7 @@
+FROM httpd-flume-avro-agent
+
+RUN cp -p /etc/apache2/sites-enabled/000-default.conf \
+  /etc/apache2/sites-enabled/000-default.conf.ORIG
+RUN sed -i \
+  -e '/^\(\s\+\)CustomLog /a\' -e '\t CustomLog "||/opt/flume/bin/flume-ng avro-client -c /opt/flume/conf -H flume_agent -p 4141" combined' \
+  /etc/apache2/sites-enabled/000-default.conf
