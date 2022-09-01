@@ -83,7 +83,7 @@ resources = ["/list", "/wp-content", "/wp-admin", "/explore", "/search/tag/list"
              "/posts/posts/explore", "/apps/cart.jsp?appID="]
 uaList = [faker.firefox, faker.chrome, faker.safari, faker.internet_explorer, faker.opera]
 
-producer = KafkaProducer(bootstrap_servers=['localhost:29092'],
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          value_serializer=lambda x: json.dumps(x).encode('utf-8'))
 
 flag = True
@@ -132,4 +132,4 @@ producer.flush()
 producer.close()
 
 # Run infinitely with a gap of 5 sec within two logs
-# python3 log-generating-extensions/python-log-generator/main.py -n 0 -o LOG -p elasticsearch/logs/ -s 1
+# python3 apache-fake-log-gen.py -n 0 -o LOG -f .\logs\apache_logs.log -s 5

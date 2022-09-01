@@ -2,3 +2,5 @@ numpy
 Faker
 pytz
 tzlocal
+kafka-python
+fake-factory
